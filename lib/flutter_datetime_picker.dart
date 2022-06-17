@@ -97,7 +97,7 @@ class DatePicker {
     DateChangedCallback? onConfirm,
     DateCancelledCallback? onCancel,
     locale: LocaleType.en,
-    TextDirection? textDirection,
+    textDirection: TextDirection.rtl,
     DateTime? currentTime,
     DatePickerTheme? theme,
   }) async {
