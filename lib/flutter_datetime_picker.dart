@@ -317,7 +317,8 @@ class _DatePickerState extends State<_DatePickerComponent> {
               child: GestureDetector(
                 child: Material(
                     color: theme.backgroundColor,
-                    child: _renderPickerView(theme,textDirection: textDirection)),
+                    child:
+                        _renderPickerView(theme, textDirection: textDirection)),
               ),
             ),
           );
@@ -332,11 +333,12 @@ class _DatePickerState extends State<_DatePickerComponent> {
     }
   }
 
-  Widget _renderPickerView(DatePickerTheme theme,{TextDirection? textDirection }) {
+  Widget _renderPickerView(DatePickerTheme theme,
+      {TextDirection? textDirection}) {
     Widget itemView = _renderItemView(theme);
     if (widget.route.showTitleActions == true) {
       return Directionality(
-        textDirection: textDirection??TextDirection.rtl,
+        textDirection: textDirection ?? TextDirection.rtl,
         child: Column(
           children: <Widget>[
             _renderTitleActionsView(theme),
