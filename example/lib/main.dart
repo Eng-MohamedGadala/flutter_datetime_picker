@@ -83,6 +83,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      // locale: Locale('ar','EG'),
       title: 'Flutter Demo',
       theme: new ThemeData(
         primarySwatch: Colors.blue,
@@ -96,6 +97,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       appBar: AppBar(
         title: Text('Datetime Picker'),
       ),
@@ -136,7 +138,7 @@ class HomePage extends StatelessWidget {
                         date.timeZoneOffset.inHours.toString());
                   }, onConfirm: (date) {
                     print('confirm $date');
-                  }, currentTime: DateTime.now());
+                  }, currentTime: DateTime.now(),locale: LocaleType.ar);
                 },
                 child: Text(
                   'show time picker',
@@ -145,6 +147,8 @@ class HomePage extends StatelessWidget {
             TextButton(
                 onPressed: () {
                   DatePicker.showTime12hPicker(context, showTitleActions: true,
+                  // locale: LocaleType.ar,
+                  textDirection: TextDirection.ltr,
                       onChanged: (date) {
                     print('change $date in time zone ' +
                         date.timeZoneOffset.inHours.toString());
@@ -166,7 +170,7 @@ class HomePage extends StatelessWidget {
                         date.timeZoneOffset.inHours.toString());
                   }, onConfirm: (date) {
                     print('confirm $date');
-                  }, locale: LocaleType.zh);
+                  }, locale: LocaleType.ar);
                 },
                 child: Text(
                   'show date time picker (Chinese)',
